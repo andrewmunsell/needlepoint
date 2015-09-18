@@ -41,7 +41,7 @@ export default class Container {
      * @return {object}       Resolved instance of the class as a singleton
      */
     static resolveSingleton(clazz) {
-        if(singletons.get(clazz) == null) {
+        if(singletons.get(clazz) === null) {
             singletons.set(clazz, Container.resolveSingleInstance(clazz));
         }
 

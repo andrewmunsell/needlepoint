@@ -5,8 +5,8 @@
 
 import container from './container';
 
-export default function dependencies(...dependencies) {
+export default function dependencies(...deps) {
     return function decorator(Clazz) {
-        container.registerDependencies(Clazz, dependencies);
-    }
+        container.registerDependencies(Clazz, deps);
+    };
 }

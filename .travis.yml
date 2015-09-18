@@ -1,4 +1,12 @@
 language: node_js
 node_js:
-  - "0.12"
-  - "iojs"
+- '0.12'
+- iojs
+deploy:
+  provider: npm
+  email: andrew@wizardapps.net
+  api_key:
+    secure: OnWemmnzHTatC11Z3zJvqXMI/hUrW6GQjS/VuWUuunT76FhkXOsYeXWohh6USW5hEdcVTrMQI/xv68OdFxT1wMYUjFmpffk7w1JEgRTxxEptbsf0ugVoanEP9R1Be4dBEVIMlCLlqvlgSITFJbSLCV4ACMN+wJlWytGhziDv6C25eMmc22Hp2KWpYSHpove+W+5JtW866D2VmYovBp/kYuujpxnEHgHGUZ/OWF2YJSHnCwEEA6Tolj6nz6vdA2HKv5T+rxWqs/uh9cg3fRrnIObhSUvhDAhOiXBd7eZ4SyPZLBd+glBHnaHIWmxIcXLZUvFWI+j6ZsGksCRqanEKLY7k3KwhS8Gy7rekW/8zl4qvS9WNUSiPPxd14xMCUtjEYhNQDqBQzFZlIi0D/t/hKZ5YYF2gDr4HeIl1nNc1PRPn+NzGNTK6IqQ+BHGrUeGsPxWv8tVxQTupcXFF2wFdDAA1eLcY8m0SZbwduQGi5TCUwjRBSItM+K3BU9g2k2Fm+H4fObJaEQqeyYnDSCcVlcc22c+PrefTsauT51ihAFpi8kHWYGJH393j6qTxQ5jjQf0q3s7ygt+IcsXPCBpqzYXGJ9bcWKv0XhBb8+Oxn44LtLkeJI8g7Qcn2oNu6Kv2PK6Tt6uHOawdkbnajy+l5EemD7kfW0oNl3+5Q9c7c/o=
+  on:
+    tags: true
+    repo: andrewmunsell/needlepoint

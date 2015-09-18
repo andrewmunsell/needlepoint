@@ -1,6 +1,6 @@
 # Needlepoint
 
-![Build Status](https://travis-ci.org/andrewmunsell/needlepoint.svg) [![Code Climate](https://codeclimate.com/github/andrewmunsell/needlepoint/badges/gpa.svg)](https://codeclimate.com/github/andrewmunsell/needlepoint)
+![Build Status](https://travis-ci.org/andrewmunsell/needlepoint.svg) [![Code Climate](https://codeclimate.com/github/andrewmunsell/needlepoint/badges/gpa.svg)](https://codeclimate.com/github/andrewmunsell/needlepoint) [![Test Coverage](https://codeclimate.com/github/andrewmunsell/needlepoint/badges/coverage.svg)](https://codeclimate.com/github/andrewmunsell/needlepoint/coverage)
 
 Needlepoint is a dependency injection framework for Node.js and other Javascript
 environments where ES6 is supported.

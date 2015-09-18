@@ -3,6 +3,8 @@ node_js:
 - '4.1'
 - '4.0'
 - '0.12'
+before_script:
+- npm install -g codeclimate-test-reporter
 deploy:
   provider: npm
   email: andrew@wizardapps.net
@@ -11,3 +13,6 @@ deploy:
   on:
     tags: true
     repo: andrewmunsell/needlepoint
+addons:
+    code_climate:
+        repo_token: 4613a04240c0cb32bc518730a187b930255efe2ff318c4f1061f5b383d831abf

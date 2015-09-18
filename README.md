@@ -25,6 +25,16 @@ To use Needlepoint, install it with `npm`:
 npm install --save needlepoint
 ```
 
+If you're not using a Javascript environment that supports both ES6 classes and
+ES7-style decorators (e.g. Node.JS), then you must configure Babel. This can be
+done pretty easily:
+
+```
+require('babel/register')({
+    optional: ['es7.decorators']
+});
+```
+
 After this, you can simply import the container where ever your application
 needs to inject dependencies:
 

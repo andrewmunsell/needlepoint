@@ -1,0 +1,33 @@
+{
+  "name": "needlepoint",
+  "version": "1.0.0",
+  "description": "ES6 and beyond dependency injection framework. Uses new ES7 proposals such as decorators.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require _babel test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewmunsell/needlepoint.git"
+  },
+  "keywords": [
+    "dependency",
+    "injection",
+    "di"
+  ],
+  "author": "Andrew Munsell <andrew@wizardapps.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewmunsell/needlepoint/issues"
+  },
+  "homepage": "https://github.com/andrewmunsell/needlepoint#readme",
+
+  "dependencies": {
+     "babel": "^5.0.0"
+  },
+
+  "devDependencies": {
+      "chai": "^3.2.0",
+      "mocha": "^2.3.2"
+  }
+}

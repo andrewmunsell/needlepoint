@@ -5,6 +5,8 @@ node_js:
 - '0.12'
 before_script:
 - npm install -g codeclimate-test-reporter
+after_script:
+- codeclimate-test-reporter < coverage/lcov.info
 deploy:
   provider: npm
   email: andrew@wizardapps.net

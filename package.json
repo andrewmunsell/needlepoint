@@ -1,6 +1,6 @@
 {
   "name": "needlepoint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ES6 and beyond dependency injection framework. Uses new ES7 proposals such as decorators.",
   "main": "src/index.js",
   "scripts": {

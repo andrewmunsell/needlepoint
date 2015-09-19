@@ -31,7 +31,12 @@ done pretty easily:
 
 ```
 require('babel/register')({
-    optional: ['es7.decorators']
+    optional: ['es7.decorators'],
+
+    // A lot of NPM modules are precompiled so Babel ignores node_modules/*
+    // by default, but Needlepoint is NOT pre-compiled so we change the ignore
+    // rules to ignore everything *except* Needlepoint.
+    ignore: /node_modules\/(?!needlepoint)/
 });
 ```
 

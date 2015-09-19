@@ -14,7 +14,7 @@ export default class Container {
      * @return {object}       Instance of the class
      */
     static resolve(clazz) {
-        clazz = Container.resolveDependencyName(clazz);
+        clazz = Container.normalizeClass(clazz);
 
         // If the class being injected is a singleton, handle it separately
         // since instances of it are cached.
@@ -66,15 +66,30 @@ export default class Container {
      * @param  {class|function|string} clazz
      * @return {class}
      */
-    static resolveDependencyName(clazz) {
+    static normalizeClass(clazz) {
         if(typeof clazz == 'string') {
-            // TODO: Handle resolving the name of the dependency into the actual
-            // class object.
+            // TODO: Actually resolve the class from the string name that
+            // was provided to us.
         } else if(typeof clazz == 'function') {
             return clazz;
         } else {
             throw new Error('Unable to resolve the dependency name to the class.');
         }
+    }
+
+    /**
+     * Register an instance as a singleton for the specified class
+     * @param  {class|string} clazz
+     * @param  {object} instance
+     */
+    static registerInstance(clazz, instance) {
+        if(typeof instance != 'object') {
+            throw new Error('The argument passed was not an object.');
+        }
+
+        clazz = Container.normalizeClass(clazz);
+
+        singletons.set(clazz, instance);
     }
 
     /**

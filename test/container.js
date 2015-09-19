@@ -103,4 +103,23 @@ describe('Container', function() {
             expect(singletonInstance.value).to.equal(singletonInstanceTwo.value);
         })
     });
+
+    describe('#registerInstance()', function() {
+        it('should register an instance as a singleton', function() {
+            var instance = {
+                hello: 'world'
+            };
+
+            container.registerInstance(Singleton, instance);
+
+            var newInstance = container.resolve(Singleton);
+
+            expect(newInstance).to.equal(instance);
+        });
+
+        it('should throw an error if a non-object is passed in as an instance', function() {
+            expect(container.registerInstance.bind(container, Singleton, 1)).to
+                .throw('The argument passed was not an object.');
+        });
+    });
 });

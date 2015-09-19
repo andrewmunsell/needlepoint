@@ -117,9 +117,9 @@ describe('Container', function() {
             expect(newInstance).to.equal(instance);
         });
 
-        it('should throw an error if a non-object is passed in as an instance', function() {
+        it('should throw an error if a non-object/non-function is passed in as an instance', function() {
             expect(container.registerInstance.bind(container, Singleton, 1)).to
-                .throw('The argument passed was not an object.');
+                .throw('The argument passed was an invalid type.');
         });
     });
 });

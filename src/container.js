@@ -83,8 +83,8 @@ export default class Container {
      * @param  {object} instance
      */
     static registerInstance(clazz, instance) {
-        if(typeof instance != 'object') {
-            throw new Error('The argument passed was not an object.');
+        if(typeof instance != 'object' && typeof instance != 'function') {
+            throw new Error('The argument passed was an invalid type.');
         }
 
         clazz = Container.normalizeClass(clazz);

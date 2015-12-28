@@ -27,11 +27,32 @@ npm install --save needlepoint
 
 If you're not using a Javascript environment that supports both ES6 classes and
 ES7-style decorators (e.g. Node.JS), then you must configure Babel. This can be
-done pretty easily:
+done pretty easily.
+
+### Babel 5
+
+If you are using Babel 5.x, you can simply add ES7 decorators to the opt-in features:
 
 ```
 require('babel/register')({
     optional: ['es7.decorators']
+});
+```
+
+### Babel 6
+
+Because Babel 6 has not entirely implemented ES7 decorators, you must install another NPM package
+ to enable the legacy ES7 decorators (as well as the corresponding presets, which I've included
+ a sample of) and then configure Babel as follows:
+
+```
+npm install --save babel-plugin-transform-decorators-legacy
+```
+
+```
+require('babel/register')({
+    presets: ['es2015', 'stage-0', 'stage-1'],
+    plugins: ['babel-plugin-transform-decorators-legacy']
 });
 ```
 

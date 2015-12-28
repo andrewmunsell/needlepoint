@@ -4,8 +4,8 @@
   "description": "ES6 and beyond dependency injection framework. Uses new ES7 proposals such as decorators.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "rm -r coverage/ && ./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover --report lcovonly ./node_modules/.bin/_mocha test/",
-    "build": "./node_modules/.bin/babel src --out-dir dist/",
+    "test": "rm -rf coverage/ dist/ && ./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover --report lcovonly ./node_modules/.bin/_mocha test/",
+    "build": "rm -rf dist/ && ./node_modules/.bin/babel src --out-dir dist/",
 
     "prepublish": "npm build"
   },

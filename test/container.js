@@ -122,4 +122,15 @@ describe('Container', function() {
                 .throw('The argument passed was an invalid type.');
         });
     });
+
+    describe('#normalizeClass()', function() {
+        it('should return the class constructor unmodified if one is passed in', function() {
+            expect(container.normalizeClass(DummyDependency)).to.equal(DummyDependency);
+        });
+
+        it('should throw an error if the provided "class name" is not a string or constructor', function() {
+            expect(container.normalizeClass.bind(container, {})).to.throw('Unable to resolve the'
+                + ' dependency name to the class.');
+        });
+    });
 });
